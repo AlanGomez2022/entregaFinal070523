@@ -1,0 +1,21 @@
+.label{
+    border-style: inset;
+    width: 70px;
+    padding:5px;
+    margin: 5px;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: bolder;
+}
+.btn{
+    font-weight: bolder;
+    border-color: black;
+    color: grey;
+}
+.btn:hover{
+    background-color: rgb(122, 103, 140);
+    border-color: white;
+}
+#counter{
+    text-align: center;
+}

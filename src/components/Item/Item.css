@@ -1,0 +1,11 @@
+img{
+    width:100px;
+}
+.card{
+    width: 100%;
+    align-items: center;
+    padding: 10px;
+}
+.stock{
+    font-weight: bold;
+}

@@ -1,0 +1,96 @@
+.nav{
+    background-image: url(./banner1.jpg) ;
+  
+    background-size:auto;
+   
+} 
+.logo{
+    width: 130px;
+}
+.titulo{
+    color: white;
+    font-family: 'Dancing Script', cursive;
+}
+.navbar-nav{
+    margin-left:300px;
+}
+.nav-item{
+    margin-left:20px;
+    margin-right:20px;
+    
+}
+.nav-link{
+    color: white;
+    opacity: 0.7;
+    border-radius:10px;
+    padding:10px;
+    font-weight: bolder;
+}
+.nav-link:hover{
+    color: rgb(224, 140, 206);
+    font-weight: bolder;
+    opacity: 0.7;
+    border-radius:10px;
+    transition: 0.8s;
+    
+}
+.nav-activo{
+    color: rgb(224, 140, 206);
+    font-weight: bolder;
+    opacity: 0.7;
+    background-color:grey; 
+    padding: 10px;
+    border-radius: 10px;
+}
+.material-symbols-outlined {
+    color: white;
+    padding: 20px;
+    margin-right:10px;
+    margin-top:10px;
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 48
+
+  }
+.material-symbols-outlined:hover {
+color: rgb(224, 140, 206);
+font-weight: bolder;
+opacity: 0.7;
+border-radius:10px;
+transition: 0.8s;
+
+font-variation-settings:
+'FILL' 0,
+'wght' 400,
+'GRAD' 0,
+'opsz' 48
+
+}
+.carrito{
+    position: relative;
+}
+
+.contCompra{
+    position: absolute;
+    top: 0;
+    right: 0;
+    color:darkgrey;
+    padding: 10px;
+    /* background-color: white; */
+    border-radius: 90%;
+    font-weight: bolder;
+    /* border: 2px solid darkviolet;  */
+}
+.contCompra:hover {
+    background-color: rgb(211, 197, 208);
+    color:black;
+    transition: 1s;
+}
+.titulo {
+    text-decoration: none;
+}
+a{
+    text-decoration: none;
+}
