@@ -23,8 +23,8 @@ const ItemListContainer = ()=>{
     
     
     return(
-        <div style={{'backgroundColor':'lightblue', 'padding':'20px'}}>
-            SOY ITEM LIST CONTAINER
+        <div style={{'backgroundColor':'darkgrey', 'padding':'20px'}}>
+            
             <ItemList productos={productos}/>    
         </div>
         

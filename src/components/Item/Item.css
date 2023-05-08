@@ -5,6 +5,7 @@ img{
     width: 100%;
     align-items: center;
     padding: 10px;
+    box-shadow: 7px 7px 25px black;
 }
 .stock{
     font-weight: bold;
