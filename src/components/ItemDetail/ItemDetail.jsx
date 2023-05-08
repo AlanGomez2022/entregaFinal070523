@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import gFetch from '../Utils/gFetch'
+
 import Counter from '../Counter/Counter'
 
 import './itemDetail.css'
