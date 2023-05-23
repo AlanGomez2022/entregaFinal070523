@@ -4,11 +4,14 @@ import CartContainer from "./components/CartContainer/CartContainer"
 import ItemDetailCotainer from "./components/ItemDetailContainer/ItemDetailCotainer"
 import ItemListContainer from "./components/ItemListContainer/ItemListContainer"
 import Navbar from "./components/Navbar/Navbar"
+import { CartContext, CartContextProvider } from './context/CartContext'
 
 function App() {
 
   return (
+    
     <BrowserRouter>
+    <CartContextProvider>
       <>
       
         <Navbar/>
@@ -21,6 +24,7 @@ function App() {
           
         </Routes>      
       </>
+      </CartContextProvider>
     </BrowserRouter>
   )
 }

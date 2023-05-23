@@ -1,15 +1,17 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 
 import Counter from '../Counter/Counter'
 
 import './itemDetail.css'
+import { CartContext } from '../../context/CartContext'
 
 const ItemDetail = ({product}) => {
-    
+  
+  const {agregarAlCart, cartList} = useContext(CartContext)
   const onAdd = (cantidad)=>{
-    console.log(cantidad)
+    agregarAlCart({...product, quantity: cantidad})
   }
-
+  console.log(cartList)
   return (
     <div className='row'>
         <div className='col-6 contImgDetail'>
