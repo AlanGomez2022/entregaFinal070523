@@ -4,7 +4,9 @@ export  const CartContext = createContext([])
 
 // componente para enmascarar el contexto
 export const CartContextProvider = ({children}) =>{
+
     const [cartList,setCartList] = useState([])
+
     const agregarAlCart = (newProduct) => {
         setCartList([...cartList,
         newProduct])
@@ -12,12 +14,18 @@ export const CartContextProvider = ({children}) =>{
     const vaciarCart = ()=>{
         setCartList([])
     }
+    const quitProduct = (id) =>{
+        const filtrado = cartList.filter(product => product.id !== id )
+        setCartList(filtrado)
+
+    }
 
     return(
         <CartContext.Provider value={{
             cartList,
             agregarAlCart,
-            vaciarCart    
+            vaciarCart,
+            quitProduct    
         }}>
             {children}
         </CartContext.Provider>
