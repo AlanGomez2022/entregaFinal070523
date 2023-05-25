@@ -2,7 +2,7 @@ import React, { useContext, useState } from 'react'
 import { CartContext } from '../../context/CartContext'
 
 const CartContainer = () => {
-  const {cartList,vaciarCart,quitProduct} = useContext(CartContext)
+  const {cartList,vaciarCart,quitProduct,precioTotal} = useContext(CartContext)
  
   const quitarProducto = (product)=>{
     quitProduct(product.id)
@@ -23,7 +23,12 @@ const CartContainer = () => {
 
               )
         })}
-        <button className='btn container' onClick={vaciarCart}>Vaciar Carrito</button>
+        <div className="container text-center p-200">
+          <h3>Precio total: {precioTotal()}</h3>
+        </div>
+        <div className='card container'>
+          <button className='btn container' onClick={vaciarCart}>Vaciar Carrito</button>
+        </div>
     </div>
   )
 }
