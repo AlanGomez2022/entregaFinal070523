@@ -1,5 +1,6 @@
 import React, { useContext, useState } from 'react'
 import { CartContext } from '../../context/CartContext'
+import { Link } from 'react-router-dom'
 
 const CartContainer = () => {
   const {cartList,vaciarCart,quitProduct,precioTotal} = useContext(CartContext)
@@ -9,6 +10,14 @@ const CartContainer = () => {
   }
 
   return (
+    cartList.length === 0 ?
+    <div className='card container-fluid'>
+      <h3>No hay productos</h3>
+      <Link to='/'> 
+        <button className='btn'>Ir a ver productos</button>
+      </Link>
+    </div>
+    :
     <div>
         {cartList.map(product =>{
             return(

@@ -8,9 +8,20 @@ export const CartContextProvider = ({children}) =>{
     const [cartList,setCartList] = useState([])
 
     const agregarAlCart = (newProduct) => {
-        setCartList([...cartList,
-        newProduct])
+        //para evitar repetir productos
+        const indexProduct = cartList.findIndex(product => product.id === newProduct.id) // retorna -1
+
+        if (indexProduct === -1){
+            setCartList([...cartList,
+            newProduct])
+        }else{
+            cartList[indexProduct].quantity += newProduct.quantity
+            setCartList([...cartList])
+        }
     }
+
+    const cantidadDeProductos = () => cartList.reduce((cantidadDeProductos, product) =>cantidadDeProductos= cantidadDeProductos + product.quantity ,0)//retorna un solo valor
+
     const vaciarCart = ()=>{
         setCartList([])
     }
@@ -29,7 +40,8 @@ export const CartContextProvider = ({children}) =>{
             agregarAlCart,
             vaciarCart,
             quitProduct,
-            precioTotal    
+            precioTotal,
+            cantidadDeProductos    
         }}>
             {children}
         </CartContext.Provider>
