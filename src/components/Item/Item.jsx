@@ -19,6 +19,7 @@ const Item = ({productos}) =>{
                       <button className='btn'>Detalle</button>
                     </Link>
                     </div>
+               
                 )
             })}
         </>

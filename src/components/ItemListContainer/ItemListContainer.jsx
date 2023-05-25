@@ -8,29 +8,6 @@ const ItemListContainer = ()=>{
     const [productos,setProductos] = useState([])
     const {cid} =useParams()
 
-    // useEffect(()=>{
-    //     if(cid){
-    //         gFetch()
-    //         .then(res=>setProductos(res.filter(prod=>prod.categoria===cid)))
-    //         .catch(err=>console.log(err))
-    //         .finally(()=>console.log('Proceso terminado'))
-    //     }else{
-    //         gFetch()
-    //         .then(res=>setProductos(res))
-    //         .catch(err=>console.log(err))
-    //         .finally(()=>console.log('Proceso terminado'))
-    //     }
-      
-    // },[cid])
-    
-    // ESTO ERA PARA TRAERME UN SOLO DOCUMNTO DE FIRESTORE
-    // useEffect(()=>{
-    //     const db = getFirestore()
-    //     const queryDoc = doc(db, 'productos', '5FKGawUihyiR33J1mYWS') // 3 argumentos
-
-    //     getDoc(queryDoc)//getDocs
-    //     .then(resp=>console.log({id:resp.id,...resp.data()}))
-    // }, [])
 
     useEffect(() => {
         if(cid){
